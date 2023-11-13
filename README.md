@@ -1,9 +1,17 @@
 # Netflix GPT
 
+-Live URL - https://ornate-tanuki-09223e.netlify.app/
+
 -app created with Vite
 -configured tailwind
 -Header
+-Routing
 -Login Form
+-Sign up Form
+-Form Validation
+-useRef Hook
+-Firebase Setup
+-Sign up user
 
 <!--  -->
 
