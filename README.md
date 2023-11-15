@@ -12,6 +12,10 @@
 -useRef Hook
 -Firebase Setup
 -Sign up user
+-useRef Hook
+-Firebase Setup
+-create Signup user Account
+-created redux store with user Slice
 
 <!--  -->
 

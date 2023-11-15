@@ -6,12 +6,15 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+
 import { auth } from "../utils/firebase.js";
+import { useNavigate } from "react-router-dom";
+
 const Login = () => {
   const [show, setShow] = useState(false);
   const [isSignedIn, setIsSignedIn] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-
+  const navigate = useNavigate();
   const email = useRef(null);
   const password = useRef(null);
 
@@ -36,8 +39,7 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
-          // ...
+          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -54,8 +56,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user, " success");
-          // ...
+          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -63,6 +64,8 @@ const Login = () => {
           setErrorMessage(errorCode + errorMessage);
         });
     }
+    email.current.value = "";
+    password.current.value = "";
   };
   return (
     <div>
@@ -140,7 +143,7 @@ const Login = () => {
             <div className="text-[rgb(179,179,179)] mt-3">
               <span className="text-sm">
                 This page is protected by Google reCAPTCHA to ensure you're not
-                2:29: a bot.
+                a bot.
               </span>{" "}
               <span
                 className="text-blue-700 font-bold cursor-pointer text-sm"
