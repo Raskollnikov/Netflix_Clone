@@ -5,16 +5,22 @@ import { checkValidateData } from "../utils/validate.js";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
+import { useDispatch } from "react-redux";
 
 import { auth } from "../utils/firebase.js";
 import { useNavigate } from "react-router-dom";
+import { addUser } from "../utils/userSlice.js";
 
 const Login = () => {
   const [show, setShow] = useState(false);
   const [isSignedIn, setIsSignedIn] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
 
@@ -39,7 +45,20 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          navigate("/browse");
+
+          updateProfile(user, {
+            displayName: name.current.value,
+            photoURL: "https://picsum.photos/200/300",
+          })
+            .then(() => {
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+
+              dispatch(addUser({ uid, email, displayName, photoURL }));
+              navigate("/browse");
+            })
+            .catch((error) => {
+              setErrorMessage(error.message);
+            });
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -95,6 +114,7 @@ const Login = () => {
           {!isSignedIn && (
             <input
               type="text"
+              ref={name}
               placeholder="Full Name"
               className="px-4 py-3 w-[90%] my-4 rounded-md bg-[rgb(51,51,51)] placeholder-[#8c8c8c]"
             />
