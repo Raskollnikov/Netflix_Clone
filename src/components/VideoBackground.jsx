@@ -1,28 +1,21 @@
-import { API_OPTIONS } from "../utils/constants";
-import { useEffect, useState } from "react";
+import useTrailer from "../hooks/useTrailer";
+import { useSelector } from "react-redux";
 
-const useGetTrailer = (movieId) => {
-  const [data, setData] = useState([]);
-  const getData = async () => {
-    const data = await fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`,
-      API_OPTIONS
-    );
-    const response = await data.json();
-    // const results = response.results();
-
-    const trailer = response.results.filter((each) => each.type == "Trailer");
-    setData(trailer);
-  };
-  useEffect(() => {
-    getData();
-  }, []);
-
-  return { data };
-};
 const VideoBackground = ({ movieId }) => {
-  const test = useGetTrailer(movieId);
-  return <div>{movieId}</div>;
+  const trailer = useSelector((store) => store.movies?.trailerVideo);
+  useTrailer(movieId);
+  if (!trailer) return;
+  const { key } = trailer;
+  // after key - > si=XYfKVi5pTCtBz6pM&controls=0&mute=1&modestbranding=1&disablekb=1&loop=1
+  return (
+    <iframe
+      src={`https://www.youtube.com/embed/${key}?&autoplay=1&mute=1&rel=0&controls=0&loop=1&showinfo=0&amp`}
+      // title="YouTube video player"
+      frameBorder="0"
+      allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      className="aspect-video w-full h-screen "
+    ></iframe>
+  );
 };
 
 export default VideoBackground;

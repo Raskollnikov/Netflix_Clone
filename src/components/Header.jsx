@@ -40,7 +40,11 @@ const Header = () => {
 
   const user = useSelector((store) => store.user);
   return (
-    <div className={`w-full flex ${user ? "justify-between" : "items-start"} `}>
+    <div
+      className={`w-full absolute z-10 flex ${
+        user ? "justify-between" : "items-start"
+      } `}
+    >
       <div className="z-10">
         <Link to="/">
           <img src={LOGO} alt={"loginPage_image"} className="w-44" />

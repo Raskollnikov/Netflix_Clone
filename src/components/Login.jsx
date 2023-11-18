@@ -99,7 +99,7 @@ const Login = () => {
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="rounded-xl absolute mx-auto text-white right-0 left-0 w-4/12 pt-10 px-10 pb-7 bg-black  bg-opacity-80  "
+        className="rounded-xl absolute mx-auto text-white top-20 right-0 left-0 w-4/12 pt-10 px-10 pb-7 bg-black  bg-opacity-80  "
       >
         <div className=" flex flex-col items-center justify-start ">
           <h1 className="font-bold text-3xl my-7  w-[90%]">

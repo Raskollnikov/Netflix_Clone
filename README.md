@@ -23,6 +23,13 @@
 -Movie API from - https://www.themoviedb.org/
 -Get Access Token verification in tmdb
 -Get data from TMDB List API
+-Custom Hook for nowPlayingMovies
+-Updated store with data
+-Planning for main container and secondary container
+-Fetch data for trailer video
+-Update store with trailer video data
+-Embedded youtube video and make it autoPlay/mute
+-Made MainContainer look cooler
 
 <!--  -->
 
