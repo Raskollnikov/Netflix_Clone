@@ -1,27 +1,20 @@
-import { signOut } from "firebase/auth";
-import { auth } from "../utils/firebase.js";
-import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-const Browse = () => {
-  const navigate = useNavigate();
-  const user = useSelector((store) => store.user);
+import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
+import Header from "./Header";
 
-  const handleSignOut = () => {
-    signOut(auth)
-      .then(() => {
-        navigate("/");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+const Browse = () => {
+  useNowPlayingMovies();
 
   return (
-    <div className="w-full flex ">
-      salami
-      <button onClick={() => handleSignOut()}>go</button>
-      <p>{user.displayName}</p>
-      <img src={user.photoUrl} alt="asd" />
+    <div className="">
+      <Header />
+      {/* 
+        MainContainer
+          -VideoBackground
+          -Video Title
+        SecondaryContainer
+          -MovieList * n
+            -cards * n
+      */}
     </div>
   );
 };

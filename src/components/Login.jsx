@@ -8,7 +8,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { useDispatch } from "react-redux";
-
+import { USER_AVATAR } from "../utils/constants.js";
 import { auth } from "../utils/firebase.js";
 import { useNavigate } from "react-router-dom";
 import { addUser } from "../utils/userSlice.js";
@@ -48,13 +48,12 @@ const Login = () => {
 
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://picsum.photos/200/300",
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
 
               dispatch(addUser({ uid, email, displayName, photoURL }));
-              navigate("/browse");
             })
             .catch((error) => {
               setErrorMessage(error.message);
@@ -74,8 +73,9 @@ const Login = () => {
       )
         .then((userCredential) => {
           // Signed in
-          const user = userCredential.user;
-          navigate("/browse");
+          // L A S T  C O M M E N T E D!
+          // const user = userCredential.user;
+          // navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -99,7 +99,7 @@ const Login = () => {
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="rounded-xl absolute mx-auto text-white right-0 left-0 w-4/12 pt-10 px-10 pb-7 bg-black  bg-opacity-80  mt-20"
+        className="rounded-xl absolute mx-auto text-white right-0 left-0 w-4/12 pt-10 px-10 pb-7 bg-black  bg-opacity-80  "
       >
         <div className=" flex flex-col items-center justify-start ">
           <h1 className="font-bold text-3xl my-7  w-[90%]">

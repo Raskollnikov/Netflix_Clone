@@ -16,6 +16,13 @@
 -Firebase Setup
 -create Signup user Account
 -created redux store with user Slice
+-Bug Fix:Sign up user display name and profile picture update
+-Redirect if the user is not logged In login page, if user is logged in redirect to Browse Page :)))
+-Add Hard Coded Values to Constants file <3
+
+-Movie API from - https://www.themoviedb.org/
+-Get Access Token verification in tmdb
+-Get data from TMDB List API
 
 <!--  -->
 
