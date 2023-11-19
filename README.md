@@ -1,9 +1,12 @@
 # Netflix GPT
 
+<<<<<<< HEAD
 <!-- 2:37:29 -->
 
 -Live URL - https://ornate-tanuki-09223e.netlify.app/
 
+=======
+>>>>>>> 968a3de0bf894d055546b678eb825f9c6d3596bf
 -app created with Vite
 -configured tailwind
 -Header
