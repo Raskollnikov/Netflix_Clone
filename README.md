@@ -1,12 +1,5 @@
 # Netflix GPT
 
-<<<<<<< HEAD
-<!-- 2:37:29 -->
-
--Live URL - https://ornate-tanuki-09223e.netlify.app/
-
-=======
->>>>>>> 968a3de0bf894d055546b678eb825f9c6d3596bf
 -app created with Vite
 -configured tailwind
 -Header
@@ -24,7 +17,6 @@
 -Bug Fix:Sign up user display name and profile picture update
 -Redirect if the user is not logged In login page, if user is logged in redirect to Browse Page :)))
 -Add Hard Coded Values to Constants file <3
-
 -Movie API from - https://www.themoviedb.org/
 -Get Access Token verification in tmdb
 -Get data from TMDB List API
@@ -35,6 +27,16 @@
 -Update store with trailer video data
 -Embedded youtube video and make it autoPlay/mute
 -Made MainContainer look cooler
+
+-Builded Secondary Component
+
+-Movie List w Different APIS
+-UI Made better
+-Added Custom Hooks useNowPlayingMovies(
+usePopularMovies,
+useTopRated,
+useUpcoming,
+) to Rtk
 
 <!--  -->
 
