@@ -7,7 +7,7 @@ const Browse = () => {
   useNowPlayingMovies();
 
   return (
-    <div className="">
+    <div>
       {/* 
         MainContainer
           -VideoBackground
