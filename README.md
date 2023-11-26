@@ -43,6 +43,7 @@
   -GPT Search Bar
   -Multi Language Feature
   -Gpt API
+  -OpenAi Library Installation
   <!--  -->
 
 #Features
