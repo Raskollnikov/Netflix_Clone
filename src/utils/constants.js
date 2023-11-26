@@ -14,3 +14,12 @@ export const API_OPTIONS = {
 };
 
 export const IMG_CDN = "https://image.tmdb.org/t/p/w500/";
+
+export const BG_URL =
+  "https://assets.nflxext.com/ffe/siteui/vlv3/77d35039-751f-4c3e-9c8d-1240c1ca6188/8caf0391-7d3c-46a5-b911-2e4eb1721385/GE-en-20231106-popsignuptwoweeks-perspective_alpha_website_large.jpg";
+
+export const SUPPORTED_LANGUAGES = [
+  { identifier: "en", name: "en" },
+  { identifier: "geo", name: "geo" },
+  { identifier: "rus", name: "rus" },
+];

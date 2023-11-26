@@ -9,11 +9,11 @@ const VideoBackground = ({ movieId }) => {
   // after key - > si=XYfKVi5pTCtBz6pM&controls=0&mute=1&modestbranding=1&disablekb=1&loop=1
   return (
     <iframe
-      src={`https://www.youtube.com/embed/${key}?&autoplay=1&mute=1&rel=0&controls=0&loop=1&showinfo=0&amp`}
-      // title="YouTube video player"
+      src={`https://www.youtube.com/embed/${key}?&autoplay=1&mute=1&rel=0&controls=0&loop=1&showinfo=0&amp;vq=hd1080`}
+      title="YouTube video player"
       frameBorder="0"
       allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      className="aspect-video w-full h-screen "
+      className="w-full h-screen object-cover"
     ></iframe>
   );
 };

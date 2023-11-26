@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 const SecondaryContainer = () => {
   const movies = useSelector((movies) => movies.movies);
-  console.log(movies.popularMovies);
+  // console.log(movies.popularMovies);
   return (
     movies.nowPlayingMovies && (
       <div className=" bg-black ">

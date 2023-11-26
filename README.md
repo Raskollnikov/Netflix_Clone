@@ -28,17 +28,22 @@
 -Embedded youtube video and make it autoPlay/mute
 -Made MainContainer look cooler
 
--Builded Secondary Component
+- -Builded Secondary Component
 
--Movie List w Different APIS
--UI Made better
--Added Custom Hooks useNowPlayingMovies(
-usePopularMovies,
-useTopRated,
-useUpcoming,
-) to Rtk
+  -Movie List w Different APIS
+  -UI Made better
+  -Added Custom Hooks useNowPlayingMovies(
+  usePopularMovies,
+  useTopRated,
+  useUpcoming,
+  ) to Rtk
 
-<!--  -->
+  -Create Gpt search feature
+  -GPT Search
+  -GPT Search Bar
+  -Multi Language Feature
+  -Gpt API
+  <!--  -->
 
 #Features
 

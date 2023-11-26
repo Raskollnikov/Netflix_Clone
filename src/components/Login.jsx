@@ -12,7 +12,7 @@ import { USER_AVATAR } from "../utils/constants.js";
 import { auth } from "../utils/firebase.js";
 import { useNavigate } from "react-router-dom";
 import { addUser } from "../utils/userSlice.js";
-
+import { BG_URL } from "../utils/constants.js";
 const Login = () => {
   const [show, setShow] = useState(false);
   const [isSignedIn, setIsSignedIn] = useState(true);
@@ -90,12 +90,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute bottom-0 top-0 left-0 right-0">
-        <img
-          src={
-            "https://assets.nflxext.com/ffe/siteui/vlv3/77d35039-751f-4c3e-9c8d-1240c1ca6188/8caf0391-7d3c-46a5-b911-2e4eb1721385/GE-en-20231106-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-          }
-          alt={"loginPage_image"}
-        />
+        <img src={BG_URL} alt={"loginPage_image"} />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
