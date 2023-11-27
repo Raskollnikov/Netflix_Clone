@@ -87,51 +87,56 @@ const Login = () => {
     password.current.value = "";
   };
   return (
-    <div>
+    <div className="">
       <Header />
-      <div className="absolute bottom-0 top-0 left-0 right-0">
-        <img src={BG_URL} alt={"loginPage_image"} />
+      <div className="fixed w-full overflow-hidden ">
+        <img
+          className="h-screen w-full object-cover"
+          src={BG_URL}
+          alt="loginPage_image"
+        />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="rounded-xl absolute mx-auto text-white top-20 right-0 left-0 w-4/12 pt-10 px-10 pb-7 bg-black  bg-opacity-80  "
+        className="w-full md:w-[40%] lg:w-[30%] rounded-xl border absolute mx-auto text-white top-40 lg:top-20 right-0 left-0 
+        pt-5 px-8 pb-4 bg-black  bg-opacity-80 "
       >
         <div className=" flex flex-col items-center justify-start ">
-          <h1 className="font-bold text-3xl my-7  w-[90%]">
+          <h1 className="font-bold text-3xl my-7  w-[90%] md:w-[80%]">
             {isSignedIn ? "Sign in" : "Sign up"}
           </h1>
           <input
             ref={email}
             type="text"
             placeholder="Email or phone number"
-            className="px-4 py-3 w-[90%]  rounded-md bg-[rgb(51,51,51)] placeholder-[#8c8c8c]"
+            className="px-4 py-3 w-[90%] md:w-[80%]  rounded-md bg-[rgb(51,51,51)] placeholder-[#8c8c8c]"
           />
           {!isSignedIn && (
             <input
               type="text"
               ref={name}
               placeholder="Full Name"
-              className="px-4 py-3 w-[90%] my-4 rounded-md bg-[rgb(51,51,51)] placeholder-[#8c8c8c]"
+              className="px-4 py-3 w-[90%] md:w-[80%] my-4 rounded-md bg-[rgb(51,51,51)] placeholder-[#8c8c8c]"
             />
           )}
           <input
             type="password"
             ref={password}
             placeholder="Password"
-            className={`px-4 py-3 w-[90%] ${
+            className={`px-4 py-3 w-[90%] md:w-[80%] ${
               isSignedIn && "my-4"
             } bg-[rgb(51,51,51)] rounded-md placeholder-[#8c8c8c]`}
           />
-          <p className="font-bold text-md w-[90%] text-red-600 ">
+          <p className="font-bold text-md w-[90%] md:w-[80%] text-red-600 ">
             {errorMessage}
           </p>
           <button
-            className="p-3 my-4 font-bold bg-[rgb(229,9,20)] w-[90%] text-center rounded-md"
+            className="p-3 my-4 font-bold bg-[rgb(229,9,20)] w-[90%] md:w-[80%] text-center rounded-md"
             onClick={handleButtonClick}
           >
             {isSignedIn ? "Sign in" : "Sign up"}
           </button>
-          <div className="w-[90%] flex justify-between text-sm items-center">
+          <div className="w-[90%] md:w-[80%] flex justify-between text-sm items-center">
             <div className="text-[rgb(179,179,179)] flex gap-1">
               <input type="checkbox" />
               <label>Remember Me</label>
@@ -143,7 +148,7 @@ const Login = () => {
 
           {/*  */}
 
-          <div className="w-[90%] mt-12">
+          <div className="w-[90%] md:w-[80%] mt-12">
             <div className="text-md flex gap-2 items-center">
               <span className="text-[rgb(179,179,179)] text-sm">
                 New to Netflix?
@@ -160,7 +165,7 @@ const Login = () => {
                 This page is protected by Google reCAPTCHA to ensure you're not
                 a bot.
               </span>{" "}
-              <span
+              {/* <span
                 className="text-blue-700 font-bold cursor-pointer text-sm"
                 onClick={() => setShow(!show)}
               >
@@ -182,7 +187,7 @@ const Login = () => {
                     reCAPTCHA service.
                   </span>
                 )}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

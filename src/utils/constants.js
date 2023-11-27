@@ -25,5 +25,5 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "rus", name: "rus" },
 ];
 
-export const GPTKEY = "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";
+export const GPTKEY = "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";
 // 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

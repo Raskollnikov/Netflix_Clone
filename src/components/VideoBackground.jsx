@@ -6,7 +6,7 @@ const VideoBackground = ({ movieId }) => {
   useTrailer(movieId);
   if (!trailer) return;
   const { key } = trailer;
-  // after key - > si=XYfKVi5pTCtBz6pM&controls=0&mute=1&modestbranding=1&disablekb=1&loop=1
+
   return (
     <iframe
       src={`https://www.youtube.com/embed/${key}?&autoplay=1&mute=1&rel=0&controls=0&loop=1&showinfo=0&amp;vq=hd1080`}

@@ -44,7 +44,18 @@
   -Multi Language Feature
   -Gpt API
   -OpenAi Library Installation
-  <!--  -->
+  -GPT Search Open Ai key
+  -Gpt Search API Call
+  -Fetched Gpt Movie Suggestions from TMDB
+  -Created GPT Slice and Added Data over there!
+  -Reused movieList Component to make movies suggestion container
+
+  -Added Memoization
+  -Added .env File For private Data
+  -Added .env to .gitignore
+  -i made website Responsive
+
+  - <!--  -->
 
 #Features
 
@@ -63,5 +74,3 @@
 -Netflix GPT
 -search bar
 -movie suggestions
-
--Added Memoization

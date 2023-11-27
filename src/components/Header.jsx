@@ -57,7 +57,7 @@ const Header = () => {
     <div
       className={`w-full absolute z-10 flex ${
         user ? "justify-between" : "items-start"
-      } `}
+      } flex-col items-center md:flex-row md:justify-between`}
     >
       <div className="z-10">
         <img src={LOGO} alt={"loginPage_image"} className="w-44" />
@@ -84,7 +84,7 @@ const Header = () => {
             {showGptSeach ? "Home Page" : "Gpt Search"}
           </button>
           <img
-            className="w-12 h-12  cursor-pointer"
+            className="hidden md:block w-12 h-12 cursor-pointer"
             src={user?.photoURL}
             alt={user?.displayName}
           />
