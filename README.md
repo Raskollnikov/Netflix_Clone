@@ -63,3 +63,5 @@
 -Netflix GPT
 -search bar
 -movie suggestions
+
+-Added Memoization
