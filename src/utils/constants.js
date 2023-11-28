@@ -8,8 +8,7 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZGI0Yzg2NzM2YjMzM2FjMmUyZTFjMDFjOWZkMmQyMiIsInN1YiI6IjY1NThlYWJkZWE4NGM3MTA5MTBkNzU2MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ThuYnFfxQvoYXC3qFdfhGdnBC9xDSAp6xzFU_RFSt5s",
+    Authorization: "Bearer " + import.meta.env.VITE_REACT_APP_TMDB_KEY,
   },
 };
 
@@ -25,4 +24,4 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "rus", name: "rus" },
 ];
 
-export const GPTKEY = "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";
+export const GPTKEY = import.meta.env.VITE_REACT_APP_GPTKEY;

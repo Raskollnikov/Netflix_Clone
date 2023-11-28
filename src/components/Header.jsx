@@ -85,6 +85,11 @@ const Header = () => {
           >
             {showGptSeach ? "Home Page" : "Gpt Search"}
           </button>
+          <p className="text-white absolute left-0 top-20 text-sm">
+            {" "}
+            {/* {JSON.stringify(import.meta.env.VITE_REACT_APP_GPTKEY)} */}
+            {/* {JSON.stringify(import.meta.env.VITE_REACT_APP_TMDB_KEY)} */}
+          </p>
           <img
             className="hidden md:block w-12 h-12 cursor-pointer"
             src={user?.photoURL}
