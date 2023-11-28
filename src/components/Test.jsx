@@ -1,6 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { IMG_CDN } from "../utils/constants";
 import useTrailer from "../hooks/useTrailer";
 import { FaStar } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
@@ -25,7 +24,6 @@ function Test() {
   const { key } = trailer;
 
   const item = testovichi?.filter((each) => each.id == id);
-  // const topRated=movies.topRated.filter(each=>each.id==id)
 
   const { original_title, overview, release_date, vote_average } = item[0];
 
@@ -34,18 +32,18 @@ function Test() {
   };
 
   return (
-    <div className="relative ">
+    <div className="sticky">
       <iframe
         src={`https://www.youtube.com/embed/${key}?&autoplay=1&mute=1&rel=0&controls=0&loop=1&showinfo=0&amp;vq=hd1080?modestbranding=1&showinfo=0&showinfo=0 `}
         title="YouTube video player"
         frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        className="w-[100vw] h-screen object-cover pointer-events-none absolute"
+        className="w-full h-screen object-cover pointer-events-none absolute"
       ></iframe>
 
-      <div className="relative text-white flex top-20 flex-col gap-3   ml-20">
+      <div className="absolute text-white flex top-20 flex-col gap-3   ml-20">
         <button
-          className="bg-transparent text-white bg-black opacity-70 mb-10 border flex items-center uppercase max-w-[120px] gap-2 py-2 px-2 rounded-md cursor-pointer"
+          className="bg-transparent text-white bg-black opacity-70 mb-8 border flex items-center uppercase max-w-[120px] gap-2 py-2 px-2 rounded-md cursor-pointer"
           onClick={navigateToBrowsePage}
         >
           <FaArrowLeft />
@@ -56,7 +54,7 @@ function Test() {
           {" "}
           HD 720p
         </span>
-        <p className="text-5xl w-[600px]">{original_title}</p>
+        <p className="text-xl lg:text-5xl w-[600px]">{original_title}</p>
         <p className="text-sm w-[300px]">{overview}</p>
 
         <p className="text-white">{release_date.slice(0, 4)}</p>
