@@ -5,9 +5,9 @@ import { BG_URL } from "../utils/constants.js";
 function GptSearch() {
   return (
     <>
-      <div className="fixed -z-10">
+      <div className="fixed w-full overflow-hidden -z-10">
         <img
-          className="h-screen object-cover"
+          className="h-screen w-full object-cover"
           src={BG_URL}
           alt={"loginPage_image"}
         />

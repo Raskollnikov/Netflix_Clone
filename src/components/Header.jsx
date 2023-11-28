@@ -9,7 +9,7 @@ import { LOGO } from "../utils/constants";
 import { toggleGptSearch } from "../utils/gptSlice";
 import { SUPPORTED_LANGUAGES } from "../utils/constants";
 import { changeLanguage } from "../utils/configSlice";
-
+import { Link } from "react-router-dom";
 const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -60,7 +60,9 @@ const Header = () => {
       } flex-col items-center md:flex-row md:justify-between`}
     >
       <div className="z-10">
+        {/* <Link to="/browse"> */}
         <img src={LOGO} alt={"loginPage_image"} className="w-44" />
+        {/* </Link> */}
       </div>
       {user && (
         <div className="flex gap-4 items-center mr-5 ">

@@ -13,7 +13,7 @@ const VideoBackground = ({ movieId }) => {
       title="YouTube video player"
       frameBorder="0"
       allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      className="w-full h-screen object-cover"
+      className="w-full h-screen object-cover pointer-events-none"
     ></iframe>
   );
 };

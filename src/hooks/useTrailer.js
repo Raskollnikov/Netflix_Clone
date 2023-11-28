@@ -6,6 +6,7 @@ import { addTrailer } from "../utils/movieSlice";
 const useTrailer = (movieId) => {
   const dispatch = useDispatch();
   const trailer = useSelector((store) => store.movies.trailerVideo);
+
   const getData = async () => {
     try {
       const data = await fetch(
@@ -24,9 +25,12 @@ const useTrailer = (movieId) => {
       console.error("Error fetching trailer data:", error);
     }
   };
+
   useEffect(() => {
-    !trailer && getData();
-  }, []);
+    getData();
+  }, [movieId]); // Fetch data whenever movieId changes
+
+  return trailer; // Optionally, you can return the trailer if needed in the component
 };
 
 export default useTrailer;

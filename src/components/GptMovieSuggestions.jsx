@@ -6,7 +6,8 @@ function GptMovieSuggestions() {
   const { movieNames, movieResults } = gptMovies;
 
   if (!movieNames) {
-    return <p className="text-white font-bold text-xl">shimmer!</p>;
+    return;
+    //  <p className="text-white font-bold text-xl">shimmer!</p>;
   }
   return (
     <div className="p-4 m-4  text-white font-bold bg-black bg-opacity-90">

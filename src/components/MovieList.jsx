@@ -1,4 +1,5 @@
 import MovieCard from "./MovieCard";
+import { Link } from "react-router-dom";
 
 const MovieList = ({ title, movies }) => {
   return (
@@ -7,7 +8,9 @@ const MovieList = ({ title, movies }) => {
       <div className="flex">
         <div className="flex ">
           {movies?.map((each) => (
-            <MovieCard {...each} key={each.id} />
+            <Link key={each.id} to={`/browse/${each.id}`}>
+              <MovieCard key={each.id} {...each} />
+            </Link>
           ))}
         </div>
       </div>
