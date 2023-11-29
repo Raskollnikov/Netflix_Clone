@@ -25,11 +25,17 @@ function Test() {
 
   const item = testovichi?.filter((each) => each.id == id);
 
-  const { original_title, overview, release_date, vote_average } = item[0];
-
   const navigateToBrowsePage = () => {
     navigate("/browse");
   };
+  if (item.length == 0) {
+    return (
+      <div className="w-full h-[100vh] flex items-center justify-center text-2xl">
+        Trailer doesn't found :(
+      </div>
+    );
+  }
+  const { original_title, overview, release_date, vote_average } = item[0];
 
   return (
     <div className="sticky">
