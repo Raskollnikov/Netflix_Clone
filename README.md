@@ -1,76 +1,76 @@
 # Netflix GPT
 
--app created with Vite
--configured tailwind
--Header
--Routing
--Login Form
--Sign up Form
--Form Validation
--useRef Hook
--Firebase Setup
--Sign up user
--useRef Hook
--Firebase Setup
--create Signup user Account
--created redux store with user Slice
--Bug Fix:Sign up user display name and profile picture update
--Redirect if the user is not logged In login page, if user is logged in redirect to Browse Page :)))
--Add Hard Coded Values to Constants file <3
--Movie API from - https://www.themoviedb.org/
--Get Access Token verification in tmdb
--Get data from TMDB List API
--Custom Hook for nowPlayingMovies
--Updated store with data
--Planning for main container and secondary container
--Fetch data for trailer video
--Update store with trailer video data
--Embedded youtube video and make it autoPlay/mute
--Made MainContainer look cooler
+-app created with Vite <br>
+-configured tailwind <br>
+-Header <br>
+-Routing <br>
+-Login Form <br>
+-Sign up Form <br>
+-Form Validation <br>
+-useRef Hook <br>
+-Firebase Setup <br>
+-Sign up user <br>
+-useRef Hook <br> 
+-Firebase Setup <br>
+-create Signup user Account <br>
+-created redux store with user Slice <br>
+-Bug Fix:Sign up user display name and profile picture update <br>
+-Redirect if the user is not logged In login page, if user is logged in redirect to Browse Page :))) <br> 
+-Add Hard Coded Values to Constants file <3 <br>
+-Movie API from - https://www.themoviedb.org/ <br>
+-Get Access Token verification in tmdb <br>
+-Get data from TMDB List API <br>
+-Custom Hook for nowPlayingMovies <br>
+-Updated store with data <br>
+-Planning for main container and secondary container <br>
+-Fetch data for trailer video <br> 
+-Update store with trailer video data <br>
+-Embedded youtube video and make it autoPlay/mute <br>
+-Made MainContainer look cooler <br>
 
-- -Builded Secondary Component
+- -Builded Secondary Component <br>
 
-  -Movie List w Different APIS
-  -UI Made better
-  -Added Custom Hooks useNowPlayingMovies(
-  usePopularMovies,
-  useTopRated,
-  useUpcoming,
-  ) to Rtk
+  -Movie List w Different APIS <br>
+  -UI Made better <br>
+  -Added Custom Hooks useNowPlayingMovies( <br>
+  usePopularMovies, <br>
+  useTopRated, <br>
+  useUpcoming, <br>
+  ) to Rtk <br>
 
-  -Create Gpt search feature
-  -GPT Search
-  -GPT Search Bar
-  -Multi Language Feature
-  -Gpt API
-  -OpenAi Library Installation
-  -GPT Search Open Ai key
-  -Gpt Search API Call
-  -Fetched Gpt Movie Suggestions from TMDB
-  -Created GPT Slice and Added Data over there!
-  -Reused movieList Component to make movies suggestion container
+  -Create Gpt search feature <br>
+  -GPT Search <br>
+  -GPT Search Bar <br>
+  -Multi Language Feature <br>
+  -Gpt API <br>
+  -OpenAi Library Installation <br>
+  -GPT Search Open Ai key <br>
+  -Gpt Search API Call <br>
+  -Fetched Gpt Movie Suggestions from TMDB <br>
+  -Created GPT Slice and Added Data over there! <br>
+  -Reused movieList Component to make movies suggestion container <br>
 
-  -Added Memoization
-  -Added .env File For private Data
-  -Added .env to .gitignore
-  -i made website Responsive
+  -Added Memoization <br>
+  -Added .env File For private Data <br>
+  -Added .env to .gitignore <br>
+  -i made website Responsive <br>
 
   - <!--  -->
+  
+#Features <br>
 
-#Features
+-Login/Signup <br>
+-Sign in/ Sign up Form <br>
+-Redirect to Browse Page <br>
 
--Login/Signup
--Sign in/ Sign up Form
--Redirect to Browse Page
+- Browse (after authentication) <br>
+  -Header <br>
+  -Main Movie <br>
+  -Trailer Background <br>
+  -Title & Description <br>
+  -Movie suggestions <br>
+  -Movie List <br>
 
-- Browse (after authentication)
-  -Header
-  -Main Movie
-  -Trailer Background
-  -Title & Description
-  -Movie suggestions
-  -Movie List
-
--Netflix GPT
--search bar
--movie suggestions
+-Netflix GPT <br>
+-search bar <br>
+-movie suggestions <br>
